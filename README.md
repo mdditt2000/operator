@@ -13,6 +13,6 @@ Demo on YouTube [video](https://www.youtube.com/watch?v=-HLcHH_vQJE)
 
 Locate the F5 Container Ingress Services Operator in OpenShift OperatorHub as shown in the diagram below. Recommend search for F5 
 
-![diagram]()
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_12-59-30.png)
 
 Demo on YouTube [video]()
