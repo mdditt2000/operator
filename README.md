@@ -23,3 +23,12 @@ Locate the F5 Container Ingress Services Operator in OpenShift OperatorHub as sh
 Select the Operator to Install. In this example I am installing the latest Operator 1.7.0. Select the Install tab as shown in the diagram
 
 ![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_13-20-27.png)
+
+### Step 3
+
+Install the Operator and provide the installation mode, installed namespaces and approval strategy. In this user-guide and demo I am using the defaults
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_13-47-45.png)
+
+
+
