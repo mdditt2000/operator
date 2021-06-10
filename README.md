@@ -10,9 +10,7 @@ Demo on YouTube [video](https://www.youtube.com/watch?v=-HLcHH_vQJE)
 
 Create BIG-IP login credentials for use with Operator Helm charts
 
-oc create secret generic bigip-login  -n kube-system --from-literal=username=admin  --from-literal=password=<secret>
-
-oc create secret generic bigip-login -n kube-system --from-literal=username=admin --from-literal=password=f5PME123
+    oc create secret generic bigip-login  -n kube-system --from-literal=username=admin  --from-literal=password=<secret>
 
 ### Step 1
 
