@@ -8,6 +8,11 @@ Demo on YouTube [video](https://www.youtube.com/watch?v=-HLcHH_vQJE)
 
 ### Prerequisites
 
+Create BIG-IP login credentials for use with Operator Helm charts
+
+oc create secret generic bigip-login  -n kube-system --from-literal=username=admin  --from-literal=password=<secret>
+
+oc create secret generic bigip-login -n kube-system --from-literal=username=admin --from-literal=password=f5PME123
 
 ### Step 1
 
@@ -15,4 +20,8 @@ Locate the F5 Container Ingress Services Operator in OpenShift OperatorHub as sh
 
 ![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_12-59-30.png)
 
-Demo on YouTube [video]()
+### Step 2
+
+Select the Operator to Install. In this example I am installing the latest Operator 1.7.0. Select the Install tab as shown in the diagram
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_12-59-30.png)
