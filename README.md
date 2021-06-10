@@ -30,5 +30,13 @@ Install the Operator and provide the installation mode, installed namespaces and
 
 ![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_13-47-45.png)
 
+Operator will take a few minutes to install
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_13-50-10.png)
+
+Once installed select the View Operator tab
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_13-51-02.png)
+
 
 
