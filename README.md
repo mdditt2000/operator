@@ -96,10 +96,10 @@ Select the Create tab
 
 Validate CIS deployment. Select Workloads/Deployments 
 
-![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-38-24.png)
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-42-54.png)
 
 Select the **f5-bigip-ctlr-operator** to see more details on the CIS deployment. Also validate the CIS deployment image
 
-![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-38-24.png)
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-45-08.png)
 
 CIS deployment is ready to receive OpenShift Routes! 
