@@ -38,11 +38,68 @@ Once installed select the View Operator tab
 
 ![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_13-51-02.png)
 
-## Step 4
+### Step 4
 
 Now that the operator is installed you can create an instance of CIS. This will deploy CIS in OpenShift
 
 ![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-07-36.png)
 
+Note that currently some fields may not be represented in form so its best to use the "YAML View" for full control of object creation. Select the "YAML View"
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-14-41.png)
+
+### Step 5
+
+Enter requirement objects in the YAML View. Please add the recommended setting below:
+
+* Remove agent as3 as this is default
+* Correct repo image is f5networks/cntr-ingress-svcs. By default OpenShift will pull the image from Docker. 
+* Change the user to user: registry.connect.redhat.com so OpenShift will be pull the published image from the RedHat Ecosystem Catalog ![diagram](https://catalog.redhat.com/software/containers/f5networks/cntr-ingress-svcs/5ec7ad05ecb5246c0903f4cf)
 
 
+```
+apiVersion: cis.f5.com/v1
+kind: F5BigIpCtlr
+metadata:
+  name: f5-server
+  namespace: openshift-operators
+spec:
+  args:
+    log_as3_response: true
+    manage_routes: true
+    log_level: DEBUG
+    route_vserver_addr: 10.192.75.109
+    bigip_partition: OpenShift
+    openshift_sdn_name: /Common/openshift_vxlan
+    bigip_url: 10.192.75.60
+    insecure: true
+    pool-member-type: cluster
+  bigip_login_secret: bigip-login
+  image:
+    pullPolicy: Always
+    repo: f5networks/cntr-ingress-svcs
+    user: registry.connect.redhat.com
+  namespace: kube-system
+  rbac:
+    create: true
+  resources: {}
+  serviceAccount:
+    create: true
+  version: latest
+```
+
+Select the Create tab
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-38-24.png)
+
+### Step 6
+
+Validate CIS deployment. Select Workloads/Deployments 
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-38-24.png)
+
+Select the **f5-bigip-ctlr-operator** to see more details on the CIS deployment. Also validate the CIS deployment image
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-38-24.png)
+
+CIS deployment is ready to receive OpenShift Routes! 
