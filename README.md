@@ -54,7 +54,7 @@ Enter requirement objects in the YAML View. Please add the recommended setting b
 
 * Remove agent as3 as this is default
 * Correct repo image is f5networks/cntr-ingress-svcs. By default OpenShift will pull the image from Docker. 
-* Change the user to user: registry.connect.redhat.com so OpenShift will be pull the published image from the RedHat Ecosystem Catalog ![diagram](https://catalog.redhat.com/software/containers/f5networks/cntr-ingress-svcs/5ec7ad05ecb5246c0903f4cf)
+* Change the user to user: registry.connect.redhat.com so OpenShift will be pull the published image from the RedHat Ecosystem Catalog [repo](https://catalog.redhat.com/software/containers/f5networks/cntr-ingress-svcs/5ec7ad05ecb5246c0903f4cf)
 
 
 ```
