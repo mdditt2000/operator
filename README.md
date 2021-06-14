@@ -38,6 +38,11 @@ Once installed select the View Operator tab
 
 ![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-10_13-51-02.png)
 
+## Step 4
+
+Now that the operator is installed you can create an instance of CIS. This will deploy CIS in OpenShift
+
+![diagram](https://github.com/mdditt2000/operator/blob/main/diagrams/2021-06-14_14-07-36.png)
 
 
 
